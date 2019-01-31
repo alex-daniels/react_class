@@ -4,12 +4,15 @@ import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
   readInput = React.createRef();
+  // this handles the binding
+  // avoiding this.variable = this.variable.bind(this)
   goToStore = (event) => {
     // don't let the form submit like normal
     event.preventDefault();
     // get text from input
     const storeId = this.readInput.current.value;
     // change page to /store/:storeId
+    // change the history via push state inside the props
     this.props.history.push(`/store/${storeId}`);
   }
 
