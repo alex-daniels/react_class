@@ -8,5 +8,3 @@ import Router from './components/Router';
 import './css/style.css';
 
 render (<Router/>, document.querySelector('#main'));
-
-/* export default StorePicker; */
