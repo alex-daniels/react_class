@@ -1,8 +1,11 @@
-//react, duh
 import React from 'react';
+import PropTypes from 'prop-types';
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
+  static propTypes = {
+    history: PropTypes.object
+  }
   readInput = React.createRef();
   // this handles the binding
   // avoiding this.variable = this.variable.bind(this)
